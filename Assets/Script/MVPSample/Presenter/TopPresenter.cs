@@ -49,6 +49,8 @@ namespace MVPSample.Presenter
         {
             public override void Begin(TopPresenter owner)
             {
+                Debug.Log("StateInit");
+
                 //var model = owner.Model;
                 var view = owner.View;
 

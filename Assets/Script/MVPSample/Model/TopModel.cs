@@ -6,7 +6,7 @@ namespace MVPSample.Model
 {
     public class TopModel
     {
-        public TopModel Create()
+        public static TopModel Create()
         {
             return new TopModel();
         }

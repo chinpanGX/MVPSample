@@ -1,6 +1,10 @@
+#nullable enable
 using System.Collections;
 using System.Collections.Generic;
 using Common.Director;
+using Common.Presenter;
+using MVPSample.Model;
+using MVPSample.Presenter;
 using UnityEngine;
 
 namespace MVPSample.Director
@@ -10,10 +14,9 @@ namespace MVPSample.Director
         // Start is called before the first frame update
         void Start()
         {
-
+            Push("Top");
         }
 
-        // Update is called once per frame
         protected override void Update()
         {
             base.Update();
@@ -21,7 +24,12 @@ namespace MVPSample.Director
 
         public override void Push(string name)
         {
-
+            var request = name switch
+            {
+                "Top" => new TopPresenter(this, TopModel.Create(), TopView.Create()),
+                _ => null!
+            };
+            base.Set(request);
         }
     }
 }

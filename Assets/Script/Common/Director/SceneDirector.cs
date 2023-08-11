@@ -23,6 +23,11 @@ namespace Common.Director
             presenter?.Execute();
         }
 
+        protected void Set(IPresenter presenter)
+        {
+            request = presenter;
+        }
+
         public virtual void Push(string name)
         {
 

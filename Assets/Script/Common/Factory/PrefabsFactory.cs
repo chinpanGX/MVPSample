@@ -1,6 +1,7 @@
 # nullable enable
 using System.Collections;
 using System.Collections.Generic;
+using Core;
 using Scriptable;
 using UnityEngine;
 
@@ -8,11 +9,17 @@ namespace Common.Factory
 {
     public static class PrefabsFactory
     {
-        [SerializeField] static ViewPrefabsSetting viewPrefabsSetting = null!;
+        static ViewPrefabsSetting viewPrefabsSetting = null!;
+
+        public static void Init()
+        {
+            viewPrefabsSetting = Resources.Load<ViewPrefabsSetting>("ViewPrefabsSetting");
+        }
 
         public static TopView CreateTopView()
         {
-            return Object.Instantiate(viewPrefabsSetting.TopViewPrefabs);
+
+            return GameObject.Instantiate<TopView>(viewPrefabsSetting.TopViewPrefabs);
         }
     }
 }
