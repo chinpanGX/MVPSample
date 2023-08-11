@@ -21,8 +21,8 @@ namespace MVPSample.Model
             public string Description { get; private set; } = string.Empty;
 
             public int Price { get; private set; } = 0;
-            
-            public Element(int uniqueId, ItemType type, string name, string desc, int price)    
+
+            public Element(int uniqueId, ItemType type, string name, string desc, int price)
             {
                 UniqueId = uniqueId;
                 Type = type;
@@ -57,11 +57,11 @@ namespace MVPSample.Model
             this.gold = playerData.Gord;
             this.next = next;
             goods.Clear();
-            items.Clear();                
+            items.Clear();
         }
 
         /// <summary>
-        /// Š‹à‚Ìİ’è
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìİ’ï¿½
         /// </summary>
         /// <param name="gold"></param>
         public virtual void SetGold(int gold)
@@ -71,7 +71,7 @@ namespace MVPSample.Model
         }
 
         /// <summary>
-        /// ŠƒAƒCƒeƒ€‚Ì’Ç‰Á
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½Ì’Ç‰ï¿½
         /// </summary>
         /// <param name="element"></param>
         public virtual void AddItem(IShopElementModel element)
@@ -80,7 +80,7 @@ namespace MVPSample.Model
         }
 
         /// <summary>
-        /// ŠƒAƒCƒeƒ€‚Ìæ“¾
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½Ìæ“¾
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -90,7 +90,7 @@ namespace MVPSample.Model
         }
 
         /// <summary>
-        /// ¤•i‚Ì’Ç‰Á
+        /// ï¿½ï¿½ï¿½iï¿½Ì’Ç‰ï¿½
         /// </summary>
         /// <param name="element"></param>
         public virtual void AddGood(IShopElementModel element)
@@ -99,24 +99,24 @@ namespace MVPSample.Model
         }
 
         /// <summary>
-        /// ¤•i‚Ìæ“¾
+        /// ï¿½ï¿½ï¿½iï¿½Ìæ“¾
         /// </summary>
         /// <param name="uniqueId"></param>
         /// <returns></returns>
         public virtual IShopElementModel? GetGoods(int uniqueId)
         {
-            if(uniqueId != -1)
+            if (uniqueId != -1)
             {
-                foreach(IShopElementModel element in Goods)
+                foreach (IShopElementModel element in Goods)
                 {
-                    if(element?.UniqueId == uniqueId)
+                    if (element?.UniqueId == uniqueId)
                     {
                         return element;
                     }
                 }
             }
             return null;
-        }       
+        }
 
         public virtual void SetNext(string next)
         {

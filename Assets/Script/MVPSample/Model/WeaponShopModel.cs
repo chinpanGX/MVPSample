@@ -10,7 +10,7 @@ namespace MVPSample.Model
         public static WeaponShopModel Create(PlayerData playerData, string next = "")
         {
             var model = new WeaponShopModel();
-            model.Init(playerData, "•Ší‰®", next);
+            model.Init(playerData, "æ­¦å™¨å±‹", next);
             return model;
         }
 
@@ -18,9 +18,9 @@ namespace MVPSample.Model
         {
             base.Init(playerData, title, next);
 
-            AddGood(new Element(0, ItemType.Weapon, "‚Ğ‚Ì‚«‚Ì‚Ú‚¤", "‚½‚¾‚Ì–_", 10));
-            AddGood(new Element(1, ItemType.Weapon, "‚Ç‚¤‚Ì‚Â‚é‚¬", "‰SÒŒü‚¯‚ÌŒ•", 350));
-            AddGood(new Element(1, ItemType.Weapon, "‚Í‚ª‚Ë‚Ì‚Â‚é‚¬", "’†‹‰ÒŒü‚¯‚ÌŒ•", 1500));
+            AddGood(new Element(0, ItemType.Weapon, "ã²ã®ãã®ã¼ã†", "ãŸã ã®ã¼ã†", 10));
+            AddGood(new Element(1, ItemType.Weapon, "ã©ã†ã®ã¤ã‚‹ã", "åˆå¿ƒè€…å‘ã‘ã®å‰£", 350));
+            AddGood(new Element(1, ItemType.Weapon, "ã¯ãŒã­ã®ã¤ã‚‹ã", "ä¸­ç´šè€…å‘ã‘ã®å‰£", 1500));
         }
     }
 }

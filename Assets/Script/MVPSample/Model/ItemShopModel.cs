@@ -13,16 +13,16 @@ namespace MVPSample.Model
         public static ItemShopModel Create(PlayerData playerData, string next = "")
         {
             var model = new ItemShopModel();
-            model.Init(playerData, "“¹‹ï‰®", next);
-            return model;            
+            model.Init(playerData, "é“å…·å±‹", next);
+            return model;
         }
 
         protected override void Init(PlayerData playerData, string title, string next)
         {
             base.Init(playerData, title, next);
-            AddGood(new Element(0, ItemType.Item, "‚â‚­‚»‚¤", "’‡ŠÔ‚Ğ‚Æ‚è‚ÌHP‚ğ30`40’ö‰ñ•œ", 8));
-            AddGood(new Element(1, ItemType.Item, "ã‚â‚­‚»‚¤", "’‡ŠÔ‚Ğ‚Æ‚è‚ÌHP‚ğ50`‰ñ•œ", 300));
-            AddGood(new Element(2, ItemType.Item, "ƒLƒƒ‰‚Ì‚Â‚Î‚³", "ˆê”ÔÅŒã‚Ös‚Á‚½’¬‚ÖˆÚ“®‚·‚é", 0));
+            AddGood(new Element(0, ItemType.Item, "ã‚„ããã†", "ä»²é–“ã®HPã‚’30~å›å¾©ã™ã‚‹", 8));
+            AddGood(new Element(1, ItemType.Item, "ç‰¹ã‚„ããã†", "ä»²é–“ã®HPã‚’50~å›å¾©ã™ã‚‹", 300));
+            AddGood(new Element(2, ItemType.Item, "ã‚­ãƒ¡ãƒ©ã®ã¤ã°ã•", "ï¼‘ç•ªæœ€å¾Œã«è¡Œã£ãŸç”ºã«ç§»å‹•ã™ã‚‹", 100));
         }
     }
 }

@@ -6,13 +6,13 @@ namespace MVPSample.Data
 {
     public enum ItemType
     {
-        None, 
+        None,
         Item,
         Weapon
     }
 
     public interface IItemData
-    { 
+    {
         ItemType Type { get; }
         string Name { get; }
         int Num { get; }
