@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Common.Director;
 using Common.Presenter;
 using Common.StateMachine;
+using Common.UI;
 using MVPSample.Model;
 using UnityEngine;
 
@@ -50,6 +51,21 @@ namespace MVPSample.Presenter
             {
                 //var model = owner.Model;
                 var view = owner.View;
+
+                view.Shop1.AddClickListenerSafe(() =>
+                {
+
+                });
+
+                view.Shop2.AddClickListenerSafe(() =>
+                {
+
+                });
+
+                view.Debug.AddClickListenerSafe(() =>
+                {
+
+                });
 
                 view.Push();
                 view.Open();

@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace Services.Core
+namespace Core
 {
     public static class ComponentLocator
     {

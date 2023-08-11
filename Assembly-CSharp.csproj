@@ -55,7 +55,6 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Common\ComponentLocator.cs" />
     <Compile Include="Assets\Script\MVPSample\Data\WeaponData.cs" />
     <Compile Include="Assets\Script\Common\UI\UIButton.cs" />
     <Compile Include="Assets\Memo\View.cs" />
@@ -86,6 +85,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Script\Common\Factory\PrefabsFactory.cs" />
     <Compile Include="Assets\Script\MVPSample\Model\ItemShopModel.cs" />
     <Compile Include="Assets\Script\Common\Director\IDirector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -118,6 +118,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Memo\Presenter.cs" />
     <Compile Include="Assets\Memo\Model.cs" />
+    <Compile Include="Assets\Script\Scriptable\ViewPrefabsSetting.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Script\MVPSample\Model\ShopModel.cs" />
     <Compile Include="Assets\Script\MVPSample\Data\PlayerData.cs" />

@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Common.View;
 using Common.UI;
+using Core;
+using Scriptable;
+using Common.Factory;
 
 public class TopView : MonoBehaviour, IView
 {
@@ -12,28 +15,55 @@ public class TopView : MonoBehaviour, IView
     [SerializeField] UIButton? shop1;
     [SerializeField] UIButton? shop2;
     [SerializeField] UIButton? debug;
-    [SerializeField] UIButton? exit;
 
-    static Common.View.Screen? screen;
-    public Canvas Canvas => throw new System.NotImplementedException();
+    # region プロパティ
+    static Common.View.Screen? Screen => ComponentLocator.GetOrNull<Common.View.Screen>();
+    public Canvas? Canvas => canvas;
+    public UIButton? Shop1 => shop1;
+    public UIButton? Shop2 => shop2;
+    public UIButton? Debug => debug;
+    public bool IsActive { get; private set; } = false;
+    # endregion プロパティ
+
+    public static TopView Create()
+    {
+        var view = PrefabsFactory.CreateTopView();
+        view.Init();
+        return view;
+    }
+
+    void Init()
+    {
+        gameObject.SetActive(false);
+    }
 
     public void Push()
     {
-
+        var screen = Screen;
+        if (screen != null)
+        {
+            screen.Push(this);
+        }
     }
 
     public void Pop()
     {
-
+        var screen = Screen;
+        if (screen != null)
+        {
+            screen.Pop();
+        }
     }
 
     public void Open()
     {
-
+        gameObject.SetActive(true);
+        IsActive = true;
     }
 
     public void Close()
     {
-
+        Destroy(gameObject);
+        IsActive = false;
     }
 }
