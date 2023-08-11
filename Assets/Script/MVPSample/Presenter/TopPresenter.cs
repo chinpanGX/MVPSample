@@ -1,3 +1,4 @@
+#nullable enable
 using System.Collections;
 using System.Collections.Generic;
 using Common.Director;
@@ -12,18 +13,66 @@ namespace MVPSample.Presenter
     {
         IDirector Director { get; set; } = null!;
         TopModel Model { get; set; } = null!;
+        TopView View { get; set; } = null!;
 
         StateMachine<TopPresenter> StateMachine { get; set; } = null!;
 
+        public TopPresenter(IDirector director, TopModel model, TopView view)
+        {
+            Director = director;
+            Model = model;
+            View = view;
+
+            StateMachine = new StateMachine<TopPresenter>(this);
+            StateMachine.Change<StateInit>();
+        }
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            Director = null!;
+
+            View.Pop();
+            View = null!;
+
+            StateMachine.Dispose();
+            StateMachine = null!;
         }
 
         public void Execute()
         {
-            throw new System.NotImplementedException();
+            StateMachine.Execute();
         }
+
+        # region ステートマシン
+        class StateInit : StateMachine<TopPresenter>.State
+        {
+            public override void Begin(TopPresenter owner)
+            {
+                //var model = owner.Model;
+                var view = owner.View;
+
+                view.Push();
+                view.Open();
+
+                owner.StateMachine.Change<StateMain>();
+            }
+        }
+
+        class StateMain : StateMachine<TopPresenter>.State
+        {
+
+        }
+
+        /// <summary>
+        /// ゲーム画面へ遷移
+        /// </summary>
+        class StateToGame : StateMachine<TopPresenter>.State
+        {
+            public override void Begin(TopPresenter owner)
+            {
+
+            }
+        }
+        # endregion ステートマシン
     }
 }

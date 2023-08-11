@@ -8,31 +8,31 @@ namespace MVPSample.Data
 {
     public class PlayerData
     {
-        public readonly static PlayerData Instance = new PlayerData();
+        public readonly static PlayerData Instance = new();
 
-        List<IItemData> items = new ();
+        List<IItemData> items = new();
         int gold = 0;
 
         public int Gord => gold;
-        public List<IItemData>@Items => items;
+        public List<IItemData> Items => items;
 
         /// <summary>
-        /// Š‹à‚Ìİ’è
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìİ’ï¿½
         /// </summary>
         /// <param name="gold"></param>
         public void SetGold(int gold)
         {
             this.gold = gold;
         }
-        
+
         /// <summary>
-        /// ƒAƒCƒeƒ€‚Ì’Ç‰Á
+        /// ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½Ì’Ç‰ï¿½
         /// </summary>
         /// <param name="name"></param>
         public void AddItem(string name)
         {
             var item = GetItem(name);
-            if(item != null)
+            if (item != null)
             {
                 item.SetNum(item.Num + 1);
             }
@@ -43,7 +43,7 @@ namespace MVPSample.Data
         }
 
         /// <summary>
-        /// •Ší‚Ì’Ç‰Á
+        /// ï¿½ï¿½ï¿½ï¿½Ì’Ç‰ï¿½
         /// </summary>
         /// <param name="name"></param>
         public void AddWeapon(string name)
@@ -60,13 +60,13 @@ namespace MVPSample.Data
         }
 
         /// <summary>
-        /// ƒAƒCƒeƒ€‚Ìæ“¾
+        /// ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½Ìæ“¾
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public ItemData? GetItem(string name) 
+        public ItemData? GetItem(string name)
         {
-            foreach (ItemData item in items) 
+            foreach (ItemData item in items)
             {
                 if (item.Name == name)
                 {
@@ -77,7 +77,7 @@ namespace MVPSample.Data
         }
 
         /// <summary>
-        /// •Ší‚Ìæ“¾
+        /// ï¿½ï¿½ï¿½ï¿½Ìæ“¾
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
