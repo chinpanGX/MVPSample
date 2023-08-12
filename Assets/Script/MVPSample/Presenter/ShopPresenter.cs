@@ -27,7 +27,7 @@ namespace MVPSample.Presenter
             View = view;
 
             StateMachine = new StateMachine<ShopPresenter>(this);
-            //StateMachine.Change<StateInit>();
+            StateMachine.Change<StateInit>();
         }
 
         public void Dispose()
@@ -124,6 +124,7 @@ namespace MVPSample.Presenter
                 // 未選択状態
                 owner.OnNodeButton(null);
 
+                Debug.Log(model.Goods.Count);
                 // 商品一覧
                 foreach (var element in model.Goods)
                 {
@@ -151,6 +152,7 @@ namespace MVPSample.Presenter
                         owner.StateMachine.Change<StateToNext>();
                     });
                 }
+
                 view.SetExitAction(() =>
                 {
                     owner.StateMachine.Change<StateToTop>();

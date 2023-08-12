@@ -6,6 +6,7 @@ using Common.UI;
 using UnityEngine;
 using DG.Tweening;
 using Core;
+using Common.Factory;
 
 namespace MVPSample.View
 {
@@ -26,7 +27,6 @@ namespace MVPSample.View
         # region プロパティ
         static Common.View.Screen? Screen => ComponentLocator.GetOrNull<Common.View.Screen>();
         public Canvas? Canvas => canvas;
-        public RectTransform? Window => window;
         public bool IsActive { get; private set; } = false;
         # endregion プロパティ
 
@@ -36,7 +36,9 @@ namespace MVPSample.View
         /// </summary>
         public static IShopView Create()
         {
-            return new ShopView();
+            var view = PrefabsFactory.CreateShopView();
+            view.Init();
+            return view;
         }
 
         /// <summary>
@@ -46,7 +48,8 @@ namespace MVPSample.View
         public IShopNode? AddNode()
         {
             if (node == null) return null;
-            var newNode = Instantiate(node, node.transform.parent, false);
+            var newNode = Instantiate(node, node.transform.parent);
+            newNode.gameObject.SetActive(true);
             nodes.Add(newNode);
             return newNode;
         }
@@ -192,11 +195,15 @@ namespace MVPSample.View
             buy.AddClickListenerSafe(() => action());
         }
 
+        /// <summary>
+        /// 終了ボタンのアクション
+        /// </summary>
+        public void SetExitAction(Action action)
+        {
+            exit.AddClickListenerSafe(() => action());
+        }
 
         public void SetDesc(string desc) { }
-
-        public void SetExitAction(Action action) { }
-
 
         public void SetHaveNum(int num) { }
 
@@ -209,7 +216,11 @@ namespace MVPSample.View
         /// </summary>
         void Init()
         {
-
+            gameObject.SetActive(false);
+            if (node != null)
+            {
+                node.gameObject.SetActive(false);
+            }
         }
 
         /// <summary>

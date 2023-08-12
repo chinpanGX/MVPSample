@@ -20,7 +20,8 @@ namespace MVPSample.Model
 
             AddGood(new Element(0, ItemType.Weapon, "ひのきのぼう", "ただのぼう", 10));
             AddGood(new Element(1, ItemType.Weapon, "どうのつるぎ", "初心者向けの剣", 350));
-            AddGood(new Element(1, ItemType.Weapon, "はがねのつるぎ", "中級者向けの剣", 1500));
+            AddGood(new Element(2, ItemType.Weapon, "はがねのつるぎ", "中級者向けの剣", 1500));
+            AddGood(new Element(3, ItemType.Weapon, "はじゃのつるぎ", "世界を制覇したものが使っていた剣", 4500));
         }
     }
 }

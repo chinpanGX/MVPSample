@@ -13,7 +13,7 @@ namespace MVPSample.Data
         List<IItemData> items = new();
         int gold = 0;
 
-        public int Gord => gold;
+        public int Gold => gold;
         public List<IItemData> Items => items;
 
         /// <summary>

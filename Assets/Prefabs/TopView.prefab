@@ -879,6 +879,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 9201611750688997915}
-  shop1: {fileID: 8705543592560897874}
-  shop2: {fileID: 612692247541209843}
+  itemShop: {fileID: 8705543592560897874}
+  weaponShop: {fileID: 612692247541209843}
   debug: {fileID: 3367915135843180619}

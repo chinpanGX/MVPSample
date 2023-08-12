@@ -54,16 +54,15 @@ namespace MVPSample.Model
         {
             this.playerData = playerData;
             this.title = title;
-            this.gold = playerData.Gord;
+            this.gold = playerData.Gold;
             this.next = next;
             goods.Clear();
             items.Clear();
         }
 
         /// <summary>
-        /// �������̐ݒ�
+        /// 所持金の設定
         /// </summary>
-        /// <param name="gold"></param>
         public virtual void SetGold(int gold)
         {
             this.gold = gold;
@@ -71,16 +70,15 @@ namespace MVPSample.Model
         }
 
         /// <summary>
-        /// �����A�C�e���̒ǉ�
+        /// 所持アイテムの追加
         /// </summary>
-        /// <param name="element"></param>
         public virtual void AddItem(IShopElementModel element)
         {
             Items.Add(element);
         }
 
         /// <summary>
-        /// �����A�C�e���̎擾
+        /// 所持アイテムの取得
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -90,16 +88,15 @@ namespace MVPSample.Model
         }
 
         /// <summary>
-        /// ���i�̒ǉ�
+        /// 商品の追加
         /// </summary>
-        /// <param name="element"></param>
         public virtual void AddGood(IShopElementModel element)
         {
             Goods.Add(element);
         }
 
         /// <summary>
-        /// ���i�̎擾
+        /// 商品の取得
         /// </summary>
         /// <param name="uniqueId"></param>
         /// <returns></returns>
@@ -118,6 +115,9 @@ namespace MVPSample.Model
             return null;
         }
 
+        /// <summary>
+        /// 次の画面を設定
+        /// </summary>
         public virtual void SetNext(string next)
         {
             this.next = next;

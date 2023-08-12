@@ -22,7 +22,7 @@ namespace MVPSample.View
         static Common.View.Screen? Screen => ComponentLocator.GetOrNull<Common.View.Screen>();
         public Canvas? Canvas => canvas;
         public UIButton? ItemShop => itemShop;
-        public UIButton? WeaponShop => WeaponShop;
+        public UIButton? WeaponShop => weaponShop;
         public UIButton? Debug => debug;
         public bool IsActive { get; private set; } = false;
         #endregion プロパティ
