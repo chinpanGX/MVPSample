@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Common.Director;
 using Common.Presenter;
+using MVPSample.Data;
 using MVPSample.Model;
 using MVPSample.Presenter;
 using MVPSample.View;
@@ -15,6 +16,7 @@ namespace MVPSample.Director
         // Start is called before the first frame update
         void Start()
         {
+            PlayerData.Instance.SetGold(1000);
             Push("Top");
         }
 
@@ -23,11 +25,17 @@ namespace MVPSample.Director
             base.Update();
         }
 
+        /// <summary>
+        /// 画面遷移
+        /// </summary>
+        /// <param name="name"></param>
         public override void Push(string name)
         {
-            var request = name switch
+            IPresenter request = name switch
             {
                 "Top" => new TopPresenter(this, TopModel.Create(), TopView.Create()),
+                "ItemShop" => new ShopPresenter(this, ItemShopModel.Create(PlayerData.Instance), ShopView.Create()),
+                "WeaponShop" => new ShopPresenter(this, WeaponShopModel.Create(PlayerData.Instance), ShopView.Create()),
                 _ => null!
             };
             base.Set(request);

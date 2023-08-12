@@ -10,9 +10,9 @@ namespace Scriptable
     {
         [Header("プレハブの設定")]
         [SerializeField] TopView topViewPrefabs;
-
-        //[SerializeField]
+        [SerializeField] ShopView shopViewPrefabs;
 
         public TopView TopViewPrefabs => topViewPrefabs;
+        public ShopView ShopViewPrefabs => shopViewPrefabs;
     }
 }

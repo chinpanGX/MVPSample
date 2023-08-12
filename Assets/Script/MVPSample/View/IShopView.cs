@@ -16,7 +16,7 @@ namespace MVPSample.View
         void SetGold(int gold);
         void SetHaveNum(int num);
         void SetCursor(int uniqueId);
-        void SetBuyAction(bool flag);
+        void SetBuyActive(bool flag);
         void SetBuyAction(System.Action action);
         void SetNextAction(System.Action action);
         void SetExitAction(System.Action action);

@@ -12,9 +12,9 @@ namespace MVPSample.View
     public class ShopView : MonoBehaviour, IShopView
     {
         [SerializeField] Canvas? canvas;
-        [SerializeField] RectTransform window;
-        [SerializeField] RectTransform cursor;
-        [SerializeField] ShopNode node;
+        [SerializeField] RectTransform? window;
+        [SerializeField] RectTransform? cursor;
+        [SerializeField] ShopNode? node;
         [SerializeField] UIText? title;
         [SerializeField] UIText? gold;
         [SerializeField] UIButton? buy;
@@ -179,7 +179,7 @@ namespace MVPSample.View
         /// <summary>
         /// ボタンのON/OFF
         /// </summary>
-        public void SetBuyAction(bool flag)
+        public void SetBuyActive(bool flag)
         {
             buy.SetInteractableSafe(flag);
         }

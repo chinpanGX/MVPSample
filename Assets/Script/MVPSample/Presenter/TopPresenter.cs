@@ -1,4 +1,5 @@
 #nullable enable
+using Microsoft.VisualBasic;
 using System.Collections;
 using System.Collections.Generic;
 using Common.Director;
@@ -16,7 +17,6 @@ namespace MVPSample.Presenter
         IDirector Director { get; set; } = null!;
         TopModel Model { get; set; } = null!;
         TopView View { get; set; } = null!;
-
         StateMachine<TopPresenter> StateMachine { get; set; } = null!;
 
         public TopPresenter(IDirector director, TopModel model, TopView view)
@@ -52,14 +52,14 @@ namespace MVPSample.Presenter
             {
                 var view = owner.View;
 
-                view.Shop1.AddClickListenerSafe(() =>
+                view.ItemShop.AddClickListenerSafe(() =>
                 {
-
+                    owner.Director.Push(Constants.ItemShop);
                 });
 
-                view.Shop2.AddClickListenerSafe(() =>
+                view.WeaponShop.AddClickListenerSafe(() =>
                 {
-
+                    owner.Director.Push(Constants.WeaponShop);
                 });
 
                 view.Debug.AddClickListenerSafe(() =>

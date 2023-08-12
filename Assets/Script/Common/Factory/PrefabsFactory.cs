@@ -19,8 +19,12 @@ namespace Common.Factory
 
         public static TopView CreateTopView()
         {
-
             return GameObject.Instantiate<TopView>(viewPrefabsSetting.TopViewPrefabs);
+        }
+
+        public static ShopView CreateShopView()
+        {
+            return GameObject.Instantiate<ShopView>(viewPrefabsSetting.ShopViewPrefabs);
         }
     }
 }

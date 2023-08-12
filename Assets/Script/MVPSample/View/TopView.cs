@@ -14,29 +14,25 @@ namespace MVPSample.View
     public class TopView : MonoBehaviour, IView
     {
         [SerializeField] Canvas? canvas;
-        [SerializeField] UIButton? shop1;
-        [SerializeField] UIButton? shop2;
+        [SerializeField] UIButton? itemShop;
+        [SerializeField] UIButton? weaponShop;
         [SerializeField] UIButton? debug;
 
         #region プロパティ
         static Common.View.Screen? Screen => ComponentLocator.GetOrNull<Common.View.Screen>();
         public Canvas? Canvas => canvas;
-        public UIButton? Shop1 => shop1;
-        public UIButton? Shop2 => shop2;
+        public UIButton? ItemShop => itemShop;
+        public UIButton? WeaponShop => WeaponShop;
         public UIButton? Debug => debug;
         public bool IsActive { get; private set; } = false;
         #endregion プロパティ
 
+        # region 生成/セットアップ
         public static TopView Create()
         {
             TopView view = PrefabsFactory.CreateTopView();
             view.Init();
             return view;
-        }
-
-        void Init()
-        {
-            gameObject.SetActive(false);
         }
 
         public void Push()
@@ -56,7 +52,9 @@ namespace MVPSample.View
                 screen.Pop();
             }
         }
+        # endregion 生成/セットアップ
 
+        # region アプリイベント
         public void Open()
         {
             gameObject.SetActive(true);
@@ -68,5 +66,13 @@ namespace MVPSample.View
             Destroy(gameObject);
             IsActive = false;
         }
+        # endregion アプリイベント
+
+        # region ヘルパー関数
+        void Init()
+        {
+            gameObject.SetActive(false);
+        }
+        # endregion
     }
 }
