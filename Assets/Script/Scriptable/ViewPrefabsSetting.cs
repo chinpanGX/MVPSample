@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MVPSample.View;
 using UnityEngine;
 
 namespace Scriptable

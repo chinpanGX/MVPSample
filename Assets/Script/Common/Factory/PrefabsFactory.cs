@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Core;
 using Scriptable;
+using MVPSample.View;
 using UnityEngine;
 
 namespace Common.Factory

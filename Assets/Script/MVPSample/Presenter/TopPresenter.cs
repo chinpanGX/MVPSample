@@ -6,6 +6,7 @@ using Common.Presenter;
 using Common.StateMachine;
 using Common.UI;
 using MVPSample.Model;
+using MVPSample.View;
 using UnityEngine;
 
 namespace MVPSample.Presenter
@@ -49,9 +50,6 @@ namespace MVPSample.Presenter
         {
             public override void Begin(TopPresenter owner)
             {
-                Debug.Log("StateInit");
-
-                //var model = owner.Model;
                 var view = owner.View;
 
                 view.Shop1.AddClickListenerSafe(() =>

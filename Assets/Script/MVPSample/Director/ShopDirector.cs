@@ -5,6 +5,7 @@ using Common.Director;
 using Common.Presenter;
 using MVPSample.Model;
 using MVPSample.Presenter;
+using MVPSample.View;
 using UnityEngine;
 
 namespace MVPSample.Director

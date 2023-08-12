@@ -39,7 +39,7 @@ namespace Common.UI
     /// </summary>
     public static class UITextExtension
     {
-        public static void SetTestSafe(this UIText? obj, string value)
+        public static void SetTextSafe(this UIText? obj, string value)
         {
             if (obj != null)
             {
@@ -47,7 +47,7 @@ namespace Common.UI
             }
         }
 
-        public static void SetTextColor(this UIText? obj, Color color)
+        public static void SetColorSafe(this UIText? obj, Color color)
         {
             if (obj != null)
             {
