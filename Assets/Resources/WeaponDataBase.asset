@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4b54f7157a9da42a49676dde139ecf, type: 3}
+  m_Name: WeaponDataBase
+  m_EditorClassIdentifier: 
+  element:
+  - uniqueId: 0
+    itemType: 2
+    name: "\u3072\u306E\u304D\u306E\u307C\u3046"
+    desc: "\u305F\u3060\u306E\u307C\u3046"
+    price: 10
+  - uniqueId: 1
+    itemType: 2
+    name: "\u3069\u3046\u306E\u3064\u308B\u304E"
+    desc: "\u521D\u5FC3\u8005\u5411\u3051\u306E\u5263"
+    price: 300
+  - uniqueId: 2
+    itemType: 2
+    name: "\u306F\u304C\u306D\u306E\u3064\u308B\u304E"
+    desc: "\u4E2D\u7D1A\u8005\u5411\u3051\u306E\u3051\u3093"
+    price: 1500
+  - uniqueId: 3
+    itemType: 2
+    name: "\u30E1\u30BF\u30B9\u30E9\u306E\u5263"
+    desc: "\u3081\u3063\u3061\u3083\u3064\u3088\u3044"
+    price: 15000

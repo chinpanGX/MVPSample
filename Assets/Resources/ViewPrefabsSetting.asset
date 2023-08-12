@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ViewPrefabsSetting
   m_EditorClassIdentifier: 
   topViewPrefabs: {fileID: 7851805911201560335, guid: c4f817e37faa4cf46aa70b1546e6e42e, type: 3}
+  shopViewPrefabs: {fileID: 5390373955006348140, guid: 1a54d85ac8dc953428dad579f19eee8a, type: 3}

@@ -88,7 +88,7 @@ namespace MVPSample.Presenter
             var element = Model.GetGoods(selectedItem);
             if (element == null) return;
 
-            if (element.Price > Model.Gold)
+            if (element.Price < Model.Gold)
             {
                 OnBuyEvent(element);
             }

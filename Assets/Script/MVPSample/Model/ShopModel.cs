@@ -10,28 +10,6 @@ namespace MVPSample.Model
 {
     public class ShopModel : IShopModel
     {
-        protected class Element : IShopElementModel
-        {
-            public int UniqueId { get; private set; } = -1;
-
-            public ItemType Type { get; private set; } = ItemType.None;
-
-            public string Name { get; private set; } = string.Empty;
-
-            public string Description { get; private set; } = string.Empty;
-
-            public int Price { get; private set; } = 0;
-
-            public Element(int uniqueId, ItemType type, string name, string desc, int price)
-            {
-                UniqueId = uniqueId;
-                Type = type;
-                Name = name;
-                Description = desc;
-                Price = price;
-            }
-        }
-
         PlayerData playerData = null!;
         string title = string.Empty;
         int gold = 0;

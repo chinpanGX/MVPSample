@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4b54f7157a9da42a49676dde139ecf, type: 3}
+  m_Name: ItemDataBase
+  m_EditorClassIdentifier: 
+  element:
+  - uniqueId: 0
+    itemType: 1
+    name: "\u3084\u304F\u305D\u3046"
+    desc: "\u4EF2\u9593\u306EHP\u309230~\u56DE\u5FA9\u3059\u308B"
+    price: 10
+  - uniqueId: 1
+    itemType: 1
+    name: "\u7279\u3084\u304F\u305D\u3046"
+    desc: "\u4EF2\u9593\u306EHP\u309259~\u56DE\u5FA9\u3059\u308B"
+    price: 300
+  - uniqueId: 2
+    itemType: 1
+    name: "\u30AD\u30E1\u30E9\u306E\u3064\u3070\u3055"
+    desc: "1\u756A\u6700\u5F8C\u306B\u884C\u3063\u305F\u753A\u306B\u79FB\u52D5\u3059\u308B"
+    price: 100
