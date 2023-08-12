@@ -75,6 +75,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\Script\Common\View\DialogView.cs" />
     <Compile Include="Assets\Script\MVPSample\Data\IItemData.cs" />
     <Compile Include="Assets\Memo\MessageBroker.cs" />
     <Compile Include="Assets\Script\MVPSample\Model\IShopModel.cs" />

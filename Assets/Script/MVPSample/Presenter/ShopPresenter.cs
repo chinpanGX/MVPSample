@@ -6,6 +6,7 @@ using Common.Presenter;
 using Common.StateMachine;
 using MVPSample.Model;
 using MVPSample.View;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 namespace MVPSample.Presenter
@@ -87,8 +88,10 @@ namespace MVPSample.Presenter
             var element = Model.GetGoods(selectedItem);
             if (element == null) return;
 
-            // 購入画面
-
+            if (element.Price > Model.Gold)
+            {
+                OnBuyEvent(element);
+            }
         }
 
         /// <summary>
@@ -124,7 +127,6 @@ namespace MVPSample.Presenter
                 // 未選択状態
                 owner.OnNodeButton(null);
 
-                Debug.Log(model.Goods.Count);
                 // 商品一覧
                 foreach (var element in model.Goods)
                 {
