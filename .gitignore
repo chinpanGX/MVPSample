@@ -1,7 +1,8 @@
 
 .vs/
 .vscode/
-Library/
-Temp/
-obj/
-Logs/
+/Library
+/Temp
+/obj
+/Logs
+
