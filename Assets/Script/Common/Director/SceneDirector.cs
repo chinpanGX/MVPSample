@@ -11,7 +11,7 @@ namespace Common.Director
         IPresenter? presenter = null;
         IPresenter? request = null;
 
-        protected virtual void Update()
+        protected virtual void Execute()
         {
             if (request != null)
             {

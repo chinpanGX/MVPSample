@@ -7,6 +7,8 @@ using MVPSample.Data;
 using MVPSample.Model;
 using MVPSample.Presenter;
 using MVPSample.View;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 namespace MVPSample.Director
@@ -18,11 +20,11 @@ namespace MVPSample.Director
         {
             PlayerData.Instance.SetGold(1000);
             Push("Top");
-        }
 
-        protected override void Update()
-        {
-            base.Update();
+            this.UpdateAsObservable().Subscribe(_ =>
+            {
+                base.Execute();
+            }).AddTo(this.gameObject);
         }
 
         /// <summary>
