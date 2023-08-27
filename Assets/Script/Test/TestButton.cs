@@ -23,9 +23,9 @@ namespace Test
         {
             foreach (UIButton button in buttons)
             {
-                button.Button.onClick.Invoke();
+                //button.Button.onClick.Invoke();
 
-                button.Button.onClick.Invoke();
+                //button.Button.onClick.Invoke();
             }
         }
     }

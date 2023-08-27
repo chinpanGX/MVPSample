@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Common.Presenter;
+using UniRx;
+using UniRx.Triggers;
 
 namespace Common.Director
 {
