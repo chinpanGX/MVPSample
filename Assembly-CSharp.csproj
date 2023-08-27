@@ -81,7 +81,6 @@
     <Compile Include="Assets\Script\MVPSample\Model\IShopModel.cs" />
     <Compile Include="Assets\Script\MVPSample\Constants.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-    <Compile Include="Assets\Script\Slot\Slot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
@@ -110,6 +109,7 @@
     <Compile Include="Assets\Script\Core\ComponentLocator.cs" />
     <Compile Include="Assets\Script\MVPSample\Model\WeaponShopModel.cs" />
     <Compile Include="Assets\Script\MVPSample\Model\IShopElementModel.cs" />
+    <Compile Include="Assets\SlotTest\Slot\Slot.cs" />
     <Compile Include="Assets\Script\Common\Presenter\IPresenter.cs" />
     <Compile Include="Assets\Script\MVPSample\View\ShopView.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
@@ -120,7 +120,7 @@
     <Compile Include="Assets\Script\MVPSample\Model\TopModel.cs" />
     <Compile Include="Assets\Script\MVPSample\Data\DataBase\GoodsDataBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-    <Compile Include="Assets\Script\Slot\SceneManager.cs" />
+    <Compile Include="Assets\SlotTest\Slot\SceneManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Script\Common\View\Screen.cs" />
     <Compile Include="Assets\Script\MVPSample\Presenter\ShopPresenter.cs" />
